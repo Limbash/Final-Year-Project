@@ -96,7 +96,12 @@ class SignUpScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginScreen(),
+                            ),
+                          ),
                           child: Text('Already have an account'),
                         ),
                       ),
@@ -119,7 +124,6 @@ class SignUpScreen extends StatelessWidget {
                           Text(
                             'OR',
                             style: TextStyle(
-                              color: tWhiteColor,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

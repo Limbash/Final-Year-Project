@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_apk/src/constants/colors.dart';
 import 'package:my_apk/src/constants/images.dart';
 import 'package:my_apk/src/constants/sizes.dart';
 import 'package:my_apk/src/constants/text.dart';

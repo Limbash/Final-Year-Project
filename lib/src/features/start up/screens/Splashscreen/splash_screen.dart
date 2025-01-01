@@ -18,6 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     startAnimation();
+    super.initState();
   }
 
   @override
