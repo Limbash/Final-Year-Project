@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_apk/src/features/authentication/screens/login/login_screen.dart';
+import 'package:my_apk/src/features/start%20up/screens/Splashscreen/splash_screen.dart';
 import 'package:my_apk/src/utils/themes.dart';
 
 void main() {
@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: THealthTheme.lightMode,
         darkTheme: THealthTheme.darkMode,
         themeMode: ThemeMode.system,
-        home: LoginScreen());
+        home: SplashScreen());
   }
 }

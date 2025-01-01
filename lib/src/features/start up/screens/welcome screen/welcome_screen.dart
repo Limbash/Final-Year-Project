@@ -4,6 +4,7 @@ import 'package:my_apk/src/constants/images.dart';
 import 'package:my_apk/src/constants/sizes.dart';
 import 'package:my_apk/src/constants/text.dart';
 import 'package:my_apk/src/features/app/screens/home/home.dart';
+import 'package:my_apk/src/features/authentication/screens/login/login_screen.dart';
 import 'package:my_apk/src/features/authentication/screens/sign%20up/sign_up_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -43,7 +44,7 @@ class WelcomeScreen extends StatelessWidget {
                   child: OutlinedButton(
                     onPressed: () => Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
                     ),
                     child: Text(
                       tLogin.toUpperCase(),

@@ -15,3 +15,9 @@ const String tLoginSubTitle = "Login to your account to continue";
 const String tEmail = "Email";
 const String tPassword = "Password";
 const String tSignInWithGoogle = "Sign In with Google";
+
+//================ Sign up screen Texts ====================
+const String tFullName = "Full Name";
+const String tPhoneNumber = "Phone No.";
+const String tSignUpPageTitle = "Welcome on Board,";
+const String tSignUpPageSubtitle = "Create an account to get started";

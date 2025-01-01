@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:my_apk/src/constants/colors.dart';
 
 class TAppTextTheme {
   TAppTextTheme._();
@@ -8,16 +7,18 @@ class TAppTextTheme {
     titleLarge: GoogleFonts.montserrat(
       fontWeight: FontWeight.bold,
       fontSize: 34,
-      color: tWhiteColor,
     ),
-    titleSmall: GoogleFonts.poppins(fontSize: 18, color: tWhiteColor),
+    titleSmall: GoogleFonts.poppins(
+      fontSize: 18,
+    ),
   );
   static TextTheme darkTextTheme = TextTheme(
     titleLarge: GoogleFonts.montserrat(
       fontWeight: FontWeight.bold,
       fontSize: 34,
-      color: tWhiteColor,
     ),
-    titleSmall: GoogleFonts.poppins(fontSize: 18, color: tWhiteColor),
+    titleSmall: GoogleFonts.poppins(
+      fontSize: 18,
+    ),
   );
 }

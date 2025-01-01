@@ -10,9 +10,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isDarkMode = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
-      backgroundColor: isDarkMode ? tSecondaryColor : tPrimaryColor,
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(tDefaultSize),
@@ -89,14 +87,19 @@ class LoginScreen extends StatelessWidget {
                           Text(
                             'OR',
                             style: TextStyle(
-                              color: tWhiteColor,
                               fontWeight: FontWeight.bold,
                             ),
+                          ),
+                          const SizedBox(
+                            height: 10,
                           ),
                           SizedBox(
                             width: double.infinity,
                             child: OutlinedButton.icon(
-                              icon: Image(image: AssetImage(tGoogleLogo)),
+                              icon: Image(
+                                image: AssetImage(tGoogleLogo),
+                                height: 20,
+                              ),
                               onPressed: () {},
                               label: Text(
                                 tSignInWithGoogle.toUpperCase(),
