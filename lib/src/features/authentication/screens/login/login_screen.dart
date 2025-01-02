@@ -63,7 +63,21 @@ class LoginScreen extends StatelessWidget {
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showBottomSheet(
+                              context: context,
+                              builder: (context) => Column(
+                                children: [
+                                  Container(
+                                    color: Colors.grey,
+                                    child: Row(
+                                      children: [],
+                                    ),
+                                  )
+                                ],
+                              ),
+                            );
+                          },
                           child: Text('Forgot Password?'),
                         ),
                       ),
