@@ -65,18 +65,34 @@ class LoginScreen extends StatelessWidget {
                         child: TextButton(
                           onPressed: () {
                             showBottomSheet(
-                              context: context,
-                              builder: (context) => Column(
-                                children: [
-                                  Container(
-                                    color: Colors.grey,
-                                    child: Row(
-                                      children: [],
-                                    ),
-                                  )
-                                ],
-                              ),
-                            );
+                                context: context,
+                                builder: (context) => Container(
+                                      padding: EdgeInsets.all(tDefaultSize),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            tForgetPasswordTitle,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .headlineLarge,
+                                          ),
+                                          Text(
+                                            tForgetPasswordSubTitle,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .headlineSmall,
+                                          ),
+                                          Container(
+                                            color: Colors.grey,
+                                            child: Row(
+                                              children: [],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ));
                           },
                           child: Text('Forgot Password?'),
                         ),
