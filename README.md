@@ -1,6 +1,6 @@
 # my_apk
 
-A new Flutter project.
+A Telehealth consultation App developed using Flutter Framework and Firebase. It is an app that is aimed at solving the problem of difficulties faced by patients and doctors as well in terms of consultation and appointment scheduling. Many at times a patient has to follow long queue after visiting the hospital in order to be consulted or to have a session with the doctor. With the help of this mobile App one can be able to fi an appointment with a doctor and can also have the consultation from their comfort zone. A chatbot will be integrated in the system which enables the funtionality of both text-based, audio and video chats.
 
 ## Getting Started
 
