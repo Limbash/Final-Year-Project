@@ -23,6 +23,8 @@ const String tSignUpPageTitle = "Welcome on Board,";
 const String tSignUpPageSubtitle = "Create an account to get started";
 
 //================= Forget Password Screen text ===================
-const String tForgetPasswordTitle = "Forgotten your password?";
+const String tForgetPasswordTitle = "Make Selection";
 const String tForgetPasswordSubTitle =
     "Choose one of the options below to change your password";
+const String tResetViaEmail = "Reset Via E-Mail";
+const String tResetViaPhoneNumber = "Reset Via Phone number";

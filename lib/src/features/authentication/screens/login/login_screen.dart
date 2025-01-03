@@ -98,11 +98,61 @@ class LoginScreen extends StatelessWidget {
                                                   size: 28,
                                                 ),
                                                 Column(
-                                                  children: [],
+                                                  children: [
+                                                    Text(
+                                                      tPhoneNumber,
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .headlineSmall,
+                                                    ),
+                                                    Text(
+                                                      tResetViaPhoneNumber,
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 12,
+                                                      ),
+                                                    ),
+                                                  ],
                                                 )
                                               ],
                                             ),
-                                          )
+                                          ),
+                                          const SizedBox(height: 10),
+                                          Container(
+                                            padding: EdgeInsets.all(
+                                                tDefaultSize - 10),
+                                            decoration: BoxDecoration(
+                                                color: Colors.grey[200],
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
+                                            child: Row(
+                                              children: [
+                                                Icon(
+                                                  Icons.mail_rounded,
+                                                  size: 28,
+                                                ),
+                                                Column(
+                                                  children: [
+                                                    Text(
+                                                      tEmail,
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .headlineSmall,
+                                                    ),
+                                                    Text(
+                                                      tResetViaEmail,
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 12,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ),
                                         ],
                                       ),
                                     ));
