@@ -85,9 +85,22 @@ class LoginScreen extends StatelessWidget {
                                                 .headlineSmall,
                                           ),
                                           Container(
-                                            color: Colors.grey,
+                                            padding: EdgeInsets.all(
+                                                tDefaultSize - 10),
+                                            decoration: BoxDecoration(
+                                                color: Colors.grey[200],
+                                                borderRadius:
+                                                    BorderRadius.circular(10)),
                                             child: Row(
-                                              children: [],
+                                              children: [
+                                                Icon(
+                                                  Icons.phone,
+                                                  size: 28,
+                                                ),
+                                                Column(
+                                                  children: [],
+                                                )
+                                              ],
                                             ),
                                           )
                                         ],
