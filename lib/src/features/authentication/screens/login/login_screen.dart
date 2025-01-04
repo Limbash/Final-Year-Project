@@ -169,7 +169,7 @@ class LoginScreen extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => HomeScreen()),
                           ),
-                          child: Text('Login'),
+                          child: Text('Login'.toUpperCase()),
                         ),
                       ),
                       const SizedBox(height: tFormHeight - 20),
