@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:my_apk/src/constants/images.dart';
 import 'package:my_apk/src/constants/sizes.dart';
 import 'package:my_apk/src/constants/text.dart';
@@ -65,97 +67,13 @@ class LoginScreen extends StatelessWidget {
                         child: TextButton(
                           onPressed: () {
                             showBottomSheet(
-                                context: context,
-                                builder: (context) => Container(
-                                      padding: EdgeInsets.all(tDefaultSize),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            tForgetPasswordTitle,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .headlineLarge,
-                                          ),
-                                          Text(
-                                            tForgetPasswordSubTitle,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .headlineSmall,
-                                          ),
-                                          Container(
-                                            padding: EdgeInsets.all(
-                                                tDefaultSize - 10),
-                                            decoration: BoxDecoration(
-                                                color: Colors.grey[200],
-                                                borderRadius:
-                                                    BorderRadius.circular(10)),
-                                            child: Row(
-                                              children: [
-                                                Icon(
-                                                  Icons.phone,
-                                                  size: 28,
-                                                ),
-                                                Column(
-                                                  children: [
-                                                    Text(
-                                                      tPhoneNumber,
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .headlineSmall,
-                                                    ),
-                                                    Text(
-                                                      tResetViaPhoneNumber,
-                                                      style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontSize: 12,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                          const SizedBox(height: 10),
-                                          Container(
-                                            padding: EdgeInsets.all(
-                                                tDefaultSize - 10),
-                                            decoration: BoxDecoration(
-                                                color: Colors.grey[200],
-                                                borderRadius:
-                                                    BorderRadius.circular(10)),
-                                            child: Row(
-                                              children: [
-                                                Icon(
-                                                  Icons.mail_rounded,
-                                                  size: 28,
-                                                ),
-                                                Column(
-                                                  children: [
-                                                    Text(
-                                                      tEmail,
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .headlineSmall,
-                                                    ),
-                                                    Text(
-                                                      tResetViaEmail,
-                                                      style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontSize: 12,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ));
+                              context: context,
+                              builder: (context) => Container(
+                                height: 200,
+                                color: Colors.blue,
+                                child: Text('Hello bottomsheet!'),
+                              ),
+                            );
                           },
                           child: Text('Forgot Password?'),
                         ),
@@ -164,11 +82,7 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => HomeScreen()),
-                          ),
+                          onPressed: () => Get.to(() => HomeScreen()),
                           child: Text('Login'.toUpperCase()),
                         ),
                       ),
@@ -198,6 +112,18 @@ class LoginScreen extends StatelessWidget {
                               ),
                             ),
                           ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Text('Don\'t have an account?'),
+                                  Text('$tSignUp here')
+                                ],
+                              ))
                         ],
                       )
                     ],
