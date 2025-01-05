@@ -66,12 +66,40 @@ class LoginScreen extends StatelessWidget {
                         alignment: Alignment.centerRight,
                         child: TextButton(
                           onPressed: () {
-                            showBottomSheet(
+                            showModalBottomSheet(
                               context: context,
                               builder: (context) => Container(
-                                height: 200,
-                                color: Colors.blue,
-                                child: Text('Hello bottomsheet!'),
+                                padding: EdgeInsets.all(tDefaultSize),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      tForgetPasswordTitle,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headlineLarge,
+                                    ),
+                                    Text(
+                                      tForgetPasswordSubTitle,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headlineSmall,
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.phone,
+                                          size: 40,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Text(tPhoneNumber),
+                                            Text(tResetViaPhoneNumber),
+                                          ],
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
                             );
                           },
