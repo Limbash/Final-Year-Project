@@ -6,7 +6,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Scaffold(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Dashboard'),
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [Text('Control panel')],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -5,6 +5,7 @@ import 'package:my_apk/src/constants/images.dart';
 import 'package:my_apk/src/constants/sizes.dart';
 import 'package:my_apk/src/constants/text.dart';
 import 'package:my_apk/src/features/app/screens/home/home.dart';
+import 'package:my_apk/src/features/authentication/screens/sign%20up/sign_up_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -144,7 +145,7 @@ class LoginScreen extends StatelessWidget {
                             height: 10,
                           ),
                           TextButton(
-                              onPressed: () {},
+                              onPressed: () => Get.to(() => SignUpScreen()),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
