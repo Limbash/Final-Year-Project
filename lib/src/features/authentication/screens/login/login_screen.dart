@@ -111,7 +111,10 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () => Get.to(() => HomeScreen()),
+                          onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeScreen())),
                           child: Text('Login'.toUpperCase()),
                         ),
                       ),
@@ -145,7 +148,12 @@ class LoginScreen extends StatelessWidget {
                             height: 10,
                           ),
                           TextButton(
-                              onPressed: () => Get.to(() => SignUpScreen()),
+                              onPressed: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => SignUpScreen(),
+                                    ),
+                                  ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
