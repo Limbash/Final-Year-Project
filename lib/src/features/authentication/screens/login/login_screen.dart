@@ -5,6 +5,8 @@ import 'package:my_apk/src/constants/images.dart';
 import 'package:my_apk/src/constants/sizes.dart';
 import 'package:my_apk/src/constants/text.dart';
 import 'package:my_apk/src/features/app/screens/home/home.dart';
+import 'package:my_apk/src/features/authentication/screens/forget%20password/forget_passwod_with_phone.dart';
+import 'package:my_apk/src/features/authentication/screens/forget%20password/forget_password_with_email.dart';
 import 'package:my_apk/src/features/authentication/screens/sign%20up/sign_up_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -72,6 +74,7 @@ class LoginScreen extends StatelessWidget {
                               builder: (context) => Container(
                                 padding: EdgeInsets.all(tDefaultSize),
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       tForgetPasswordTitle,
@@ -85,20 +88,72 @@ class LoginScreen extends StatelessWidget {
                                           .textTheme
                                           .headlineSmall,
                                     ),
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.phone,
-                                          size: 40,
+                                    const SizedBox(height: tDefaultSize),
+                                    GestureDetector(
+                                      onTap: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              ForgetPasswordWithPhone(),
                                         ),
-                                        Column(
+                                      ),
+                                      child: Container(
+                                        padding: EdgeInsets.all(tDefaultSize),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
                                           children: [
-                                            Text(tPhoneNumber),
-                                            Text(tResetViaPhoneNumber),
+                                            Icon(
+                                              Icons.phone,
+                                              size: 40,
+                                            ),
+                                            const SizedBox(
+                                                width: tDefaultSize - 20),
+                                            Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(tPhoneNumber),
+                                                Text(tResetViaPhoneNumber),
+                                              ],
+                                            )
                                           ],
-                                        )
-                                      ],
-                                    )
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(height: tDefaultSize),
+                                    GestureDetector(
+                                      onTap: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              ForgetPasswordWithEmail(),
+                                        ),
+                                      ),
+                                      child: Container(
+                                        padding: EdgeInsets.all(tDefaultSize),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          children: [
+                                            Icon(
+                                              Icons.email_rounded,
+                                              size: 40,
+                                            ),
+                                            const SizedBox(
+                                                width: tDefaultSize - 20),
+                                            Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(tEmail),
+                                                Text(tResetViaEmail),
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
                                   ],
                                 ),
                               ),
