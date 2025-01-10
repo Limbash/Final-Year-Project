@@ -98,6 +98,11 @@ class LoginScreen extends StatelessWidget {
                                         ),
                                       ),
                                       child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.grey.shade700,
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
                                         padding: EdgeInsets.all(tDefaultSize),
                                         child: Row(
                                           mainAxisAlignment:
@@ -131,6 +136,11 @@ class LoginScreen extends StatelessWidget {
                                         ),
                                       ),
                                       child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.grey.shade700,
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                        ),
                                         padding: EdgeInsets.all(tDefaultSize),
                                         child: Row(
                                           mainAxisAlignment:
