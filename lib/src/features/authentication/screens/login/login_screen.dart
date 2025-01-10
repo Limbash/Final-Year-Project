@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_apk/src/constants/images.dart';
 import 'package:my_apk/src/constants/sizes.dart';
 import 'package:my_apk/src/constants/text.dart';
@@ -78,15 +79,14 @@ class LoginScreen extends StatelessWidget {
                                   children: [
                                     Text(
                                       tForgetPasswordTitle,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headlineLarge,
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 38,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                     Text(
                                       tForgetPasswordSubTitle,
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headlineSmall,
+                                      style: GoogleFonts.poppins(fontSize: 22),
                                     ),
                                     const SizedBox(height: tDefaultSize),
                                     GestureDetector(
@@ -99,7 +99,7 @@ class LoginScreen extends StatelessWidget {
                                       ),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          color: Colors.grey.shade700,
+                                          color: Colors.grey.shade400,
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
@@ -137,7 +137,7 @@ class LoginScreen extends StatelessWidget {
                                       ),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          color: Colors.grey.shade700,
+                                          color: Colors.grey.shade400,
                                           borderRadius:
                                               BorderRadius.circular(12),
                                         ),
